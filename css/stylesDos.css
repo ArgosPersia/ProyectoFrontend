@@ -1,0 +1,228 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    background: #fff;
+    color: #111;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #fff;
+    color: #111;
+    padding: 1rem 2rem;
+    position: relative;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+
+nav .search-bar {
+    display: flex;
+    align-items: center;
+    background: #f3f3f3;
+    border-radius: 20px;
+    padding: 0.3rem 1rem;
+    position: absolute;
+    left: 2rem;
+}
+
+nav .search-bar input {
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    background: transparent;
+    margin-right: 0.5rem;
+    color: #111;
+}
+
+nav .logo {
+    font-weight: 700;
+    font-size: 1.7rem;
+    letter-spacing: 2px;
+    color: #111;
+    text-align: center;
+    flex: 1;
+    background: transparent;
+}
+
+nav .icons {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    right: 2rem;
+}
+
+nav .icons i, nav .icons a i {
+    margin-left: 1.2rem;
+    font-size: 1.2rem;
+    cursor: pointer;
+    color: #111;
+    transition: color 0.2s;
+}
+
+nav .icons i:hover, nav .icons a i:hover {
+    color: #888;
+}
+
+.sub-nav {
+    display: flex;
+    justify-content: center;
+    background: #111;
+    padding: 0.5rem 0;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.03);
+}
+
+.sub-nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 1.2rem;
+    font-weight: 500;
+    transition: color 0.2s;
+    letter-spacing: 1px;
+}
+
+.sub-nav a:hover {
+    color: #ffb6d5;
+}
+
+.catalogo {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 1rem;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+}
+
+.catalogo h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    color: #111;
+}
+
+.catalogo-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 2rem;
+}
+
+.producto {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+    padding: 1.2rem;
+    text-align: center;
+    position: relative;
+    transition: box-shadow 0.2s;
+}
+
+.producto:hover {
+    box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+}
+
+.producto img, .carousel img {
+    width: 100%;
+    max-height: 220px;
+    object-fit: cover;
+    border-radius: 8px;
+    display: none;
+    transition: opacity 0.3s;
+    background: #fff;
+}
+
+.producto img.active, .carousel img.active, .producto img:not(.carousel img) {
+    display: block;
+}
+
+.producto h3 {
+    margin: 1rem 0 0.5rem 0;
+    font-size: 1.1rem;
+    color: #111;
+}
+
+.producto p {
+    color: #111;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.producto button {
+    background: #111;
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    padding: 0.5rem 1.5rem;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
+}
+
+.producto button:hover {
+    background: #fff;
+    color: #111;
+    border: 1px solid #111;
+}
+
+.carousel {
+    position: relative;
+    width: 100%;
+    height: 220px;
+    margin-bottom: 1rem;
+}
+
+.carousel img {
+    position: absolute;
+    left: 0; top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    z-index: 1;
+}
+
+.carousel img.active {
+    opacity: 1;
+    z-index: 2;
+    display: block;
+}
+
+.carousel button.prev,
+.carousel button.next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255,255,255,0.7);
+    border: none;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    z-index: 3;
+    color: #111;
+    transition: none;
+}
+
+.carousel button.prev:hover,
+.carousel button.next:hover {
+    background: rgba(255,255,255,0.7);
+    color: #111;
+    border: none;
+}
+
+.carousel button.prev { left: 8px; }
+.carousel button.next { right: 8px; }
+
+@media (max-width: 900px) {
+    nav .search-bar { position: static; margin-bottom: 0.5rem; }
+    nav .icons { position: static; }
+    nav { flex-direction: column; gap: 0.5rem; }
+}
+
+@media (max-width: 700px) {
+    .catalogo-grid {
+        grid-template-columns: 1fr;
+    }
+    nav {
+        flex-direction: column;}
+    }
