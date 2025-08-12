@@ -1,0 +1,245 @@
+body {
+    padding-top: 70px;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column;
+    background: #23242a;
+    
+}
+.form-nav {
+    width: 100%;
+    background-color: #1c1c1c;
+    padding: 15px 0;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.4);
+    z-index: 1000;
+}
+
+.form-nav a {
+    color: #ff6600;
+    font-weight: 700;
+    font-size: 1.5rem;
+    text-decoration: none;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
+    display: block;
+    width: max-content;
+    margin: 0 auto;
+    transition: color 0.3s ease;
+}
+
+
+.box {
+    position: relative;
+    width: 380px;
+    height: 520px;
+    background: #1c1c1c;
+    overflow: hidden;
+}
+
+.box::before {
+    content:"";
+    z-index: 1;
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 380px;
+    height: 420px;
+    transform-origin: bottom right;
+    background: linear-gradient(0deg, transparent, #ff6600, #ff6600);
+    animation: animate 6s linear infinite;
+}
+
+.box::after {
+    content:"";
+    z-index: 1;
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 380px;
+    height: 420px;
+    transform-origin: bottom right;
+    background: linear-gradient(0deg, transparent, #ff6600, #ff6600);
+    animation: animate 6s linear infinite;
+    animation-delay: -3s;
+}
+
+@keyframes animate {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+form {
+    position: absolute;
+    inset: 2px;
+    background: #333;
+    padding: 50px 40px;
+    border-radius: 8px;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+}
+
+h2 {
+    color: #ff6600;
+    font-weight: bold;
+    text-align: center;
+    letter-spacing: 0.1em;
+}
+
+.inputBox {
+    position: relative;
+    width: 300px;
+    margin-top: 35px;
+}
+
+.inputBox input {
+    position: relative;
+    width: 100%;
+    padding: 20px 10px 10px;
+    background: transparent;
+    outline: none;
+    border: none;
+    color: #fff;
+    font-size: 1em;
+    letter-spacing: 0.05em;
+    transition: 0.5s;
+    z-index: 10;
+}
+
+.inputBox span {
+    position: absolute;
+    left: 0;
+    padding: 20px 0px 10px;
+    pointer-events: none;
+    font-size: 1em;
+    color: #8f8f8f;
+    letter-spacing: 0.05em;
+    transition: 0.5s;
+}
+
+.inputBox input:valid ~ span,
+.inputBox input:focus ~ span {
+    color: #ff6600;
+    transform: translateX(0px) translateY(-34px);
+    font-size: 0.75em;
+}
+
+.inputBox i {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background: #ff6600;
+    transition: 0.5s;
+    z-index: 9;
+}
+
+.inputBox input:valid ~ i,
+.inputBox input:focus ~ i {
+    height: 44px;
+}
+
+.links {
+    display: flex;
+    justify-content: space-between;
+}
+
+.links a {
+    margin: 10px 0;
+    font-size: 0.75em;
+    color: #8f8f8f;
+    text-decoration: none;
+}
+
+.links a:hover, 
+.links a:nth-child(2) {
+    color: #ff6600;
+}
+
+input[type="submit"] {
+    border: none;
+    outline: none;
+    padding: 11px 25px;
+    background: #ff6600;
+    cursor: pointer;
+    border-radius: 4px;
+    font-weight: 600;
+    width: 140px;
+    margin: 10px;
+}
+
+input[type="submit"]:active {
+    opacity: 0.8;
+}
+
+/*Estilos del sub-nav (no tocar, delicado)*/
+.sub-nav {
+    background-color: #333;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    padding: 10px 0;
+    position: relative;
+}
+
+.sub-nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 14px;
+    transition: color 0.3s ease;
+    position: relative;
+    padding: 8px 5px;
+}
+
+.sub-nav a:hover {
+    color: #ff6600;
+}
+
+/* Dropdown */
+.sub-nav a .dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #1c1c1c;
+    padding: 10px 0;
+    min-width: 180px;
+    border-radius: 0 0 8px 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.5);
+    z-index: 2000;
+    flex-direction: column;
+}
+
+.sub-nav a .dropdown li {
+    list-style: none;
+}
+
+.sub-nav a .dropdown li a {
+    display: block;
+    padding: 8px 20px;
+    color: #ccc;
+    font-size: 13px;
+    white-space: nowrap;
+}
+
+.sub-nav a .dropdown li a:hover {
+    background-color: #ff6600;
+    color: #fff;
+}
+
+/* Mostrar dropdown al hacer hover en el padre */
+.sub-nav a.has-dropdown:hover .dropdown {
+    display: flex;
+    flex-direction: column;
+}
+
