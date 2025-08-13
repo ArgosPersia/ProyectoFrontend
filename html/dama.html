@@ -6,7 +6,80 @@
     <title>American Brands - Dama</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="/css/stylesDos.css">
+    <link rel="stylesheet" href="/css/styles.css">
+    <style>
+        .catalogo-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .producto {
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+            padding: 18px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 340px;
+            max-width: 320px;
+            margin: 0 auto;
+            width: 100%;
+        }
+        .mini-carousel {
+            width: 100%;
+            max-width: 260px;
+            min-width: 220px;
+            height: auto;
+            aspect-ratio: 1/1;
+            position: relative;
+            overflow: hidden;
+            border-radius: 8px;
+            background: #000;
+            margin-bottom: 10px;
+        }
+        .mini-carousel img {
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0;
+            transition: opacity 0.7s;
+            border-radius: 8px;
+            aspect-ratio: 1/1;
+        }
+        .mini-carousel img.active {
+            opacity: 1;
+        }
+        .producto button {
+            background: #222;
+            color: #fff;
+            border: none;
+            border-radius: 20px;
+            padding: 10px 28px;
+            font-size: 15px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: background 0.22s, transform 0.16s, box-shadow 0.16s;
+            box-shadow: 0 2px 8px rgba(34,34,34,0.10);
+            margin-top: 12px;
+            letter-spacing: 1px;
+        }
+        .producto button:hover, .producto button:focus {
+            background: #ff6600;
+            color: #fff;
+            transform: translateY(-2px) scale(1.04);
+            box-shadow: 0 6px 18px rgba(255,102,0,0.16);
+            outline: none;
+        }
+        @media (max-width: 600px) {
+            .mini-carousel { aspect-ratio: 1/1; max-width: 100%; min-width: 0; }
+            .producto { min-height: 220px; }
+        }
+    </style>
 </head>
 <body>
 
@@ -18,7 +91,7 @@
         </div>
         <div class="logo">AMERICAN BRANDS</div>
         <div class="icons">
-            <i class="fas fa-user"></i>
+            <a href="/ProyectoFrontend/html/inicioSesion.html"><i class="fas fa-user"></i></a>
             <i class="fas fa-shopping-bag"></i>
         </div>
     </nav>
@@ -26,102 +99,112 @@
     <!-- Segunda barra -->
     <div class="sub-nav">
         <a href="index.html">INICIO</a>
-        <a href="caballero.html">CABALLERO</a>
-        <a href="#">MARCAS</a>
+        <div class="menu-item has-dropdown">
+            <a href="dama.html">DAMA</a>
+            <ul class="dropdown">
+                <li><a href="#">Blusas</a></li>
+                <li><a href="#">Camisas</a></li>
+                <li><a href="#">Tops</a></li>
+                <li><a href="#">Camisetas</a></li>
+                <li><a href="#">Jeans</a></li>
+                <li><a href="#">Pantalones</a></li>
+                <li><a href="#">Faldas</a></li>
+                <li><a href="#">Chaquetas</a></li>
+                <li><a href="#">Sacos</a></li>
+                <li><a href="#">Blazers</a></li>
+                <li><a href="#">Vestidos</a></li>
+                <li><a href="#">Abrigos</a></li>
+                <li><a href="#">Sudaderas</a></li>
+                <li><a href="#">Accesorios</a></li>
+            </ul>
+        </div>
+        <div class="menu-item has-dropdown">
+            <a href="caballero.html">CABALLERO</a>
+            <ul class="dropdown">
+                <li><a href="#">Camisas</a></li>
+                <li><a href="#">Camisetas</a></li>
+                <li><a href="#">Jeans</a></li>
+                <li><a href="#">Pantalones</a></li>
+                <li><a href="#">Chaquetas</a></li>
+                <li><a href="#">Sacos</a></li>
+                <li><a href="#">Abrigos</a></li>
+                <li><a href="#">Accesorios</a></li>
+            </ul>
+        </div>
+        <div class="menu-item has-dropdown">
+            <a href="#">MARCAS</a>
+            <ul class="dropdown">
+                <li><a href="#">Fiorucci</a></li>
+                <li><a href="#">Bronco</a></li>
+                <li><a href="#">Lois</a></li>
+                <li><a href="#">1921 by McGregor</a></li>
+                <li><a href="#">Tayssir Jeans</a></li>
+            </ul>
+        </div>
         <a href="#">OFERTAS RELÁMPAGO</a>
         <a href="#">BÁSICO</a>
         <a href="nuevo.html">NUEVO</a>
     </div>
 
     <!-- Catálogo Dama -->
-    <section class="catalogo catalogo-dama">
-        <h2>Catálogo Dama</h2>
+    <section class="catalogo catalogo-dama" style="padding: 40px 0;">
+        <h2 style="text-align:center; margin-bottom: 30px;">Catálogo Dama</h2>
         <div class="catalogo-grid">
             <div class="producto">
-                <div class="carousel">
-                    <img src="../assets/dama1.jpg" alt="Vestido Floral" class="active">
-                    <img src="../assets/dama1b.jpg" alt="Vestido Floral Detalle">
-                    <img src="../assets/dama1c.jpg" alt="Vestido Floral Espalda">
-                    <button class="prev">&#10094;</button>
-                    <button class="next">&#10095;</button>
+                <div class="mini-carousel">
+                    <img src="../img/Vestido 1.jpg" alt="Vestido Floral" class="active">
+                    <img src="../img/Vestido 2.jpg" alt="Vestido Floral Detalle">
+                    <img src="../img/Vestido 3.jpg" alt="Vestido Floral Espalda">
                 </div>
                 <h3>Vestido Floral</h3>
                 <p>$89.900</p>
                 <button>Ver más</button>
             </div>
             <div class="producto">
-                <div class="carousel">
-                    <img src="../assets/dama2.jpg" alt="Blusa Casual" class="active">
-                    <img src="../assets/dama2b.jpg" alt="Blusa Casual Detalle">
-                    <img src="../assets/dama2c.jpg" alt="Blusa Casual Espalda">
-                    <button class="prev">&#10094;</button>
-                    <button class="next">&#10095;</button>
+                <div class="mini-carousel">
+                    <img src="../img/Blusa 1.jpg" alt="Blusa Casual" class="active">
+                    <img src="../img/Blusa 2.jpg" alt="Blusa Casual Detalle">
+                    <img src="../img/Blusa 3.jpg" alt="Blusa Casual Espalda">
                 </div>
                 <h3>Blusa Casual</h3>
                 <p>$49.900</p>
                 <button>Ver más</button>
             </div>
             <div class="producto">
-                <div class="carousel">
-                    <img src="../assets/dama3.jpg" alt="Pantalón Skinny" class="active">
-                    <img src="../assets/dama3b.jpg" alt="Pantalón Skinny Detalle">
-                    <img src="../assets/dama3c.jpg" alt="Pantalón Skinny Espalda">
-                    <button class="prev">&#10094;</button>
-                    <button class="next">&#10095;</button>
+                <div class="mini-carousel">
+                    <img src="../img/Pantalon skinny 1.webp" alt="Pantalón Skinny" class="active">
+                    <img src="../img/Pantalon skinny 2.webp" alt="Pantalón Skinny Detalle">
                 </div>
                 <h3>Pantalón Skinny</h3>
                 <p>$69.900</p>
                 <button>Ver más</button>
             </div>
             <div class="producto">
-                <div class="carousel">
-                    <img src="../assets/dama4.jpg" alt="Falda Plisada" class="active">
-                    <img src="../assets/dama4b.jpg" alt="Falda Plisada Detalle">
-                    <img src="../assets/dama4c.jpg" alt="Falda Plisada Espalda">
-                    <button class="prev">&#10094;</button>
-                    <button class="next">&#10095;</button>
+                <div class="mini-carousel">
+                    <img src="../img/Falda 1.webp" alt="Falda Plisada" class="active">
+                    <img src="../img/Falda 2.webp" alt="Falda Plisada Detalle">
+                    <img src="../img/Falda 3.webp" alt="Falda Plisada Espalda">
                 </div>
                 <h3>Falda Plisada</h3>
                 <p>$59.900</p>
                 <button>Ver más</button>
             </div>
-            <div class="producto">
-                <div class="carousel">
-                    <img src="../assets/dama5.jpg" alt="Chaqueta de Jean" class="active">
-                    <img src="../assets/dama5b.jpg" alt="Chaqueta de Jean Detalle">
-                    <img src="../assets/dama5c.jpg" alt="Chaqueta de Jean Espalda">
-                    <button class="prev">&#10094;</button>
-                    <button class="next">&#10095;</button>
-                </div>
-                <h3>Chaqueta de Jean</h3>
-                <p>$109.900</p>
-                <button>Ver más</button>
-            </div>
-            <div class="producto">
-                <div class="carousel">
-                    <img src="../assets/dama6.jpg" alt="Camiseta Básica" class="active">
-                    <img src="../assets/dama6b.jpg" alt="Camiseta Básica Detalle">
-                    <img src="../assets/dama6c.jpg" alt="Camiseta Básica Espalda">
-                    <button class="prev">&#10094;</button>
-                    <button class="next">&#10095;</button>
-                </div>
-                <h3>Camiseta Básica</h3>
-                <p>$29.900</p>
-                <button>Ver más</button>
-            </div>
-            <div class="producto">
-                <img src="../assets/dama7.jpg" alt="Pantalon Palazzo">
-                <h3>Pantalón Palazzo</h3>
-                <p>$79.900</p>
-                <button>Ver más</button>
-            </div>
-            <div class="producto">
-                <img src="../assets/dama8.jpg" alt="Blazer Elegante">
-                <h3>Blazer Elegante</h3>
-                <p>$139.900</p>
-                <button>Ver más</button>
-            </div>
         </div>
     </section>
 
-    <script src="../js/carrusel.js"></script>
+    <script>
+    // Carrusel automático reducido para cada tarjeta
+    document.querySelectorAll('.mini-carousel').forEach(function(carousel) {
+        const images = carousel.querySelectorAll('img');
+        let current = 0;
+        function show(idx) {
+            images.forEach((img, i) => img.classList.toggle('active', i === idx));
+        }
+        setInterval(() => {
+            current = (current + 1) % images.length;
+            show(current);
+        }, 2200);
+    });
+    </script>
+</body>
+</html>
