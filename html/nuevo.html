@@ -6,7 +6,8 @@
     <title>American Brands - Nuevo</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="../css/stylesDos.css">
+    <link rel="stylesheet" href="../css/styles.css">
     <style>
         .catalogo-grid {
             display: grid;
@@ -32,13 +33,16 @@
             width: 100%;
             max-width: 260px;
             min-width: 220px;
-            height: auto;
-            aspect-ratio: 1/1;
+            height: 260px;
             position: relative;
             overflow: hidden;
-            border-radius: 8px;
-            background: #000;
+            border-radius: 12px;
+            background: #fff;
             margin-bottom: 10px;
+            aspect-ratio: unset;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
         .mini-carousel img {
             position: absolute;
@@ -48,8 +52,7 @@
             object-fit: cover;
             opacity: 0;
             transition: opacity 0.7s;
-            border-radius: 8px;
-            aspect-ratio: 1/1;
+            border-radius: 12px;
         }
         .mini-carousel img.active {
             opacity: 1;
@@ -76,7 +79,7 @@
             outline: none;
         }
         @media (max-width: 600px) {
-            .mini-carousel { aspect-ratio: 1/1; max-width: 100%; min-width: 0; }
+            .mini-carousel { max-width: 100%; min-width: 0; height: 180px; }
             .producto { min-height: 220px; }
         }
     </style>
@@ -91,7 +94,13 @@
         </div>
         <div class="logo">AMERICAN BRANDS</div>
         <div class="icons">
-            <a href="/ProyectoFrontend/html/inicioSesion.html"><i class="fas fa-user"></i></a>
+            <div class="user-menu">
+                <i class="fas fa-user"></i>
+                <div class="dropdown">
+                    <a href="../html/inicioSesion.html">Iniciar sesión</a>
+                    <a href="../html/registroUsuario.html">Registrarse</a>
+                </div>
+            </div>
             <i class="fas fa-shopping-bag"></i>
         </div>
     </nav>
@@ -194,8 +203,6 @@
         setInterval(() => {
             current = (current + 1) % images.length;
             show(current);
-        }, 3000);
+        }, 2200);
     });
     </script>
-</body>
-</html>

@@ -103,6 +103,53 @@ a {
 .sub-nav > a:hover {
     color: #ff6600;
 }
+/* Menú desplegable usuario */
+.user-menu {
+    position: relative;
+    display: inline-block; /* Asegura que el hover abarque icono + menú */
+}
+
+.user-menu i {
+    cursor: pointer;
+}
+
+/* Caja de opciones */
+.user-menu .dropdown {
+    position: absolute;
+    top: 95%; 
+    right: 0;
+    background-color: white;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    display: none;
+    flex-direction: column;
+    min-width: 150px;
+    z-index: 200;
+
+    opacity: 0;
+    transform: translateY(-5px);
+    transition: all 0.2s ease;
+}
+
+.user-menu .dropdown a {
+    padding: 10px;
+    font-size: 14px;
+    color: #333;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.user-menu .dropdown a:hover {
+    background-color: #f4f4f4;
+}
+
+.user-menu:hover .dropdown {
+    display: flex;
+    opacity: 1;
+    transform: translateY(0);
+}
+
 
 /* Para los menús con dropdown */
 .menu-item {
@@ -184,7 +231,7 @@ a {
         gap: 15px;
     }
 }
-/*Acá el carrusel automático*/
+/*Acá los estilos del carrusel automático*/
 .carousel {
     width: 100%;
     max-width: 1000px; 
@@ -204,7 +251,7 @@ a {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: center 40%; /* muestra más cuerpo */
+    object-position: center 40%; 
     opacity: 0;
     transition: opacity 1s ease-in-out;
 }
