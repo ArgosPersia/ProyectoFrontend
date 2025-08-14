@@ -6,18 +6,100 @@
     <title>American Brands - Nuevo</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<<<<<<< HEAD
     <link rel="stylesheet" href="../css/stylesDos.css">
+=======
+    <link rel="stylesheet" href="/css/styles.css">
+    <style>
+        .catalogo-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .producto {
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+            padding: 18px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 340px;
+            max-width: 320px;
+            margin: 0 auto;
+            width: 100%;
+        }
+        .mini-carousel {
+            width: 100%;
+            max-width: 260px;
+            min-width: 220px;
+            height: auto;
+            aspect-ratio: 1/1;
+            position: relative;
+            overflow: hidden;
+            border-radius: 8px;
+            background: #000;
+            margin-bottom: 10px;
+        }
+        .mini-carousel img {
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0;
+            transition: opacity 0.7s;
+            border-radius: 8px;
+            aspect-ratio: 1/1;
+        }
+        .mini-carousel img.active {
+            opacity: 1;
+        }
+        .producto button {
+            background: #222;
+            color: #fff;
+            border: none;
+            border-radius: 20px;
+            padding: 10px 28px;
+            font-size: 15px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: background 0.22s, transform 0.16s, box-shadow 0.16s;
+            box-shadow: 0 2px 8px rgba(34,34,34,0.10);
+            margin-top: 12px;
+            letter-spacing: 1px;
+        }
+        .producto button:hover, .producto button:focus {
+            background: #ff6600;
+            color: #fff;
+            transform: translateY(-2px) scale(1.04);
+            box-shadow: 0 6px 18px rgba(255,102,0,0.16);
+            outline: none;
+        }
+        @media (max-width: 600px) {
+            .mini-carousel { aspect-ratio: 1/1; max-width: 100%; min-width: 0; }
+            .producto { min-height: 220px; }
+        }
+    </style>
+>>>>>>> 7b1e3e7ba44f0fb326f3a8e8c95f5b85941d4a48
 </head>
 <body>
 
     <!-- Barra principal -->
+<<<<<<< HEAD
 <nav>
+=======
+    <nav>
+>>>>>>> 7b1e3e7ba44f0fb326f3a8e8c95f5b85941d4a48
         <div class="search-bar">
             <input type="text" placeholder="Buscar...">
             <i class="fas fa-search"></i>
         </div>
         <div class="logo">AMERICAN BRANDS</div>
         <div class="icons">
+<<<<<<< HEAD
             <div class="user-menu">
                 <i class="fas fa-user"></i>
                 <div class="dropdown">
@@ -26,6 +108,9 @@
                 </div>
             </div>
 
+=======
+            <a href="/ProyectoFrontend/html/inicioSesion.html"><i class="fas fa-user"></i></a>
+>>>>>>> 7b1e3e7ba44f0fb326f3a8e8c95f5b85941d4a48
             <i class="fas fa-shopping-bag"></i>
         </div>
     </nav>
@@ -33,31 +118,83 @@
     <!-- Segunda barra -->
     <div class="sub-nav">
         <a href="index.html">INICIO</a>
-        <a href="dama.html">DAMA</a>
-        <a href="caballero.html">CABALLERO</a>
-        <a href="#">MARCAS</a>
+        <div class="menu-item has-dropdown">
+            <a href="dama.html">DAMA</a>
+            <ul class="dropdown">
+                <li><a href="#">Blusas</a></li>
+                <li><a href="#">Camisas</a></li>
+                <li><a href="#">Tops</a></li>
+                <li><a href="#">Camisetas</a></li>
+                <li><a href="#">Jeans</a></li>
+                <li><a href="#">Pantalones</a></li>
+                <li><a href="#">Faldas</a></li>
+                <li><a href="#">Chaquetas</a></li>
+                <li><a href="#">Sacos</a></li>
+                <li><a href="#">Blazers</a></li>
+                <li><a href="#">Vestidos</a></li>
+                <li><a href="#">Abrigos</a></li>
+                <li><a href="#">Sudaderas</a></li>
+                <li><a href="#">Accesorios</a></li>
+            </ul>
+        </div>
+        <div class="menu-item has-dropdown">
+            <a href="caballero.html">CABALLERO</a>
+            <ul class="dropdown">
+                <li><a href="#">Camisas</a></li>
+                <li><a href="#">Camisetas</a></li>
+                <li><a href="#">Jeans</a></li>
+                <li><a href="#">Pantalones</a></li>
+                <li><a href="#">Chaquetas</a></li>
+                <li><a href="#">Sacos</a></li>
+                <li><a href="#">Abrigos</a></li>
+                <li><a href="#">Accesorios</a></li>
+            </ul>
+        </div>
+        <div class="menu-item has-dropdown">
+            <a href="#">MARCAS</a>
+            <ul class="dropdown">
+                <li><a href="#">Fiorucci</a></li>
+                <li><a href="#">Bronco</a></li>
+                <li><a href="#">Lois</a></li>
+                <li><a href="#">1921 by McGregor</a></li>
+                <li><a href="#">Tayssir Jeans</a></li>
+            </ul>
+        </div>
         <a href="#">OFERTAS RELÁMPAGO</a>
         <a href="#">BÁSICO</a>
+        <a href="nuevo.html">NUEVO</a>
     </div>
 
     <!-- Catálogo Nuevo -->
-    <section class="catalogo catalogo-nuevo">
-        <h2>Nuevos Lanzamientos</h2>
+    <section class="catalogo catalogo-nuevo" style="padding: 40px 0;">
+        <h2 style="text-align:center; margin-bottom: 30px;">Nuevos Lanzamientos</h2>
         <div class="catalogo-grid">
             <div class="producto">
-                <img src="../assets/nuevo1.jpg" alt="Nuevo Producto 1">
+                <div class="mini-carousel">
+                    <img src="../img/Sudadera 1.avif" alt="Sudadera Oversize" class="active">
+                    <img src="../img/Sudadera 2.avif" alt="Sudadera Oversize Detalle">
+                    <img src="../img/Sudadera 3.avif" alt="Sudadera Oversize Espalda">
+                </div>
                 <h3>Sudadera Oversize</h3>
                 <p>$99.900</p>
                 <button>Ver más</button>
             </div>
             <div class="producto">
-                <img src="../assets/nuevo2.jpg" alt="Nuevo Producto 2">
+                <div class="mini-carousel">
+                    <img src="../img/Impermeable 1.avif" alt="Chaqueta Impermeable" class="active">
+                    <img src="../img/Impermeable 2.avif" alt="Chaqueta Impermeable Detalle">
+                    <img src="../img/Impermeable 3.avif" alt="Chaqueta Impermeable Espalda">
+                </div>
                 <h3>Chaqueta Impermeable</h3>
                 <p>$129.900</p>
                 <button>Ver más</button>
             </div>
             <div class="producto">
-                <img src="../assets/nuevo3.jpg" alt="Nuevo Producto 3">
+                <div class="mini-carousel">
+                    <img src="../img/Zapatos 1.webp" alt="Tenis Urbanos" class="active">
+                    <img src="../img/Zapatos 2.webp" alt="Tenis Urbanos Detalle">
+                    <img src="../img/Zapatos 3.webp" alt="Tenis Urbanos Espalda">
+                </div>
                 <h3>Tenis Urbanos</h3>
                 <p>$149.900</p>
                 <button>Ver más</button>
@@ -65,6 +202,19 @@
         </div>
     </section>
 
-    <script src="../js/carrusel.js"></script>
+    <script>
+    // Carrusel automático reducido para cada tarjeta
+    document.querySelectorAll('.mini-carousel').forEach(function(carousel) {
+        const images = carousel.querySelectorAll('img');
+        let current = 0;
+        function show(idx) {
+            images.forEach((img, i) => img.classList.toggle('active', i === idx));
+        }
+        setInterval(() => {
+            current = (current + 1) % images.length;
+            show(current);
+        }, 3000);
+    });
+    </script>
 </body>
 </html>
