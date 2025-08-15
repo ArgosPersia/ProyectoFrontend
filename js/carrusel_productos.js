@@ -3,7 +3,7 @@ const pista = document.querySelector(".carrusel-pista");
 const slides = document.querySelectorAll(".carrusel-slide");
 const indicadoresCont = document.querySelector(".carrusel-indicadores");
 
-  const slidesVisibles = 4;
+const slidesVisibles = 4;
 const totalSlides = slides.length;
 
 let indiceActual = 0;
