@@ -11,8 +11,8 @@
 </head>
 <body>
 
-    <!-- Barra principal -->
-   <nav>
+        <!-- Barra principal -->
+    <nav>
         <div class="search-bar">
             <input type="text" placeholder="Buscar...">
             <i class="fas fa-search"></i>
@@ -21,8 +21,6 @@
         <div class="logo">AMERICAN BRANDS</div>
 
         <div class="icons">
-            <!-- Volver a inicio de sesión -->
-            <a href="../html/inicioSesion.html"><i class="fas fa-user"></i></a>  
             <div class="user-menu">
                 <i class="fas fa-user"></i>
                 <div class="dropdown">
@@ -31,13 +29,29 @@
                 </div>
             </div>
 
-            <i class="fas fa-shopping-bag"></i>
+            <div class="shopping-bag" id="carrito-icon">
+    <i class="fas fa-shopping-bag"></i>
+    <span class="carrito-count">0</span>
+            </div>
+            <div id="carrito-modal" class="carrito-modal">
+    <div class="carrito-content">
+        <span id="cerrar-carrito" class="cerrar">&times;</span>
+        <h2>Tu Carrito</h2>
+        <ul id="carrito-items">
+            <li>No hay productos aún</li>
+        </ul>
+        <div class="carrito-total">
+            <strong>Total:</strong> $<span id="carrito-total">0</span>
+        </div>
+        <button id="checkout-btn">Ir a Pagar</button>
+    </div>
+</div>
         </div>
     </nav>
 
     <!-- Segunda barra -->
     <div class="sub-nav">
-        <a href="../html/index.html">INICIO</a>
+        
         <a href="/html/index.html">INICIO</a>
 <div class="menu-item has-dropdown">
     <a href="/html/dama.html">DAMA</a>
@@ -80,51 +94,10 @@
 </div>
 <!-- Barra supererior hasta aqui-->
 
-
-
-<div class="marcalog">
-<div class="marcapos"> <a href="/html/marcas/bronco.html"><img src="/img_marcas/BRONCO.jpg" alt="..."></a></div>
-<div class="marcapos"> <a href="/html/marcas/1921.html"><img src="/img_marcas/1921 ITER.jpg" alt="..."></a></div>
-<div class="marcapos"> <a href="/html/marcas/lois.html"><img src="/img_marcas/LOIS.jpg" alt="..."></a></div>
 </div>
 
-        <div class="menu-item has-dropdown">
-            <a href="../html/dama.html">DAMA</a>
-            <ul class="dropdown">
-                <li><a href="#">Blusas</a></li>
-                <li><a href="#">Camisas</a></li>
-                <li><a href="#">Tops</a></li>
-                <li><a href="#">Camisetas</a></li>
-                <li><a href="#">Jeans</a></li>
-                <li><a href="#">Pantalones</a></li>
-                <li><a href="#">Faldas</a></li>
-                <li><a href="#">Chaquetas</a></li>
-                <li><a href="#">Sacos</a></li>
-                <li><a href="#">Blazers</a></li>
-                <li><a href="#">Vestidos</a></li>
-                <li><a href="#">Abrigos</a></li>
-                <li><a href="#">Sudaderas</a></li>
-                <li><a href="#">Accesorios</a></li>
-            </ul>
-        </div>
+       
 
-        <div class="menu-item has-dropdown">
-            <a href="../html/caballero.html">CABALLERO</a>
-            <ul class="dropdown">
-                <li><a href="#">Camisas</a></li>
-                <li><a href="#">Camisetas</a></li>
-                <li><a href="#">Jeans</a></li>
-                <li><a href="#">Pantalones</a></li>
-                <li><a href="#">Chaquetas</a></li>
-                <li><a href="#">Sacos</a></li>
-                <li><a href="#">Abrigos</a></li>
-                <li><a href="#">Accesorios</a></li>
-            </ul>
-        </div>
-
-        <a href="#">OFERTAS RELÁMPAGO</a>
-        <a href="#">BÁSICO</a>
-        <a href="../html/nuevo.html">NUEVO</a>
     </div>
     <!-- Barra superior hasta aquí -->
 
@@ -149,6 +122,39 @@
             <a href="marcas/tayssir.html"><img src="../img_marcas/TAYSSIR.jpg" alt="Tayssir"></a>
         </div>
     </div>
+    <footer class="footer">
+        <div class="footer-marcas">
+            <span class="bronco">BRONCO</span>
+            <span class="lois">LOIS</span>
+            <span class="taysir">TAYSIR</span>
+            <span class="international">1921 INTERNATIONAL</span>
+            <span class="fiorucci">FIORUCCI</span>
+        </div>
+
+        <div class="footer-info-clean">
+            <div>
+                <h4>PAGO SEGURO</h4>
+                <div class="payment-icons">
+                    <i class="fa-brands fa-cc-visa"></i>
+                    <i class="fa-brands fa-cc-diners-club"></i>
+                    <i class="fa-brands fa-cc-mastercard"></i>
+                    <i class="fa-brands fa-cc-amex"></i>
+                </div>
+            </div>
+
+            <div class="footer-redes">
+                <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+                <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+            </div>
+        </div>
+
+        <p class="footer-copy">
+            Copyright © 2023 American Brands. Reservados todos los derechos. <a href="#">Mundo Web</a>
+        </p>
+        <p class="footer-brand">AMERICAN BRANDS</p>
+    </footer> 
 
 </body>
 </html>

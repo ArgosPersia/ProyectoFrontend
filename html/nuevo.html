@@ -86,7 +86,7 @@
 </head>
 <body>
 
-    <!-- Barra principal -->
+        <!-- Barra principal -->
     <nav>
         <div class="search-bar">
             <input type="text" placeholder="Buscar...">
@@ -104,7 +104,23 @@
                 </div>
             </div>
 
-            <i class="fas fa-shopping-bag"></i>
+            <div class="shopping-bag" id="carrito-icon">
+    <i class="fas fa-shopping-bag"></i>
+    <span class="carrito-count">0</span>
+            </div>
+            <div id="carrito-modal" class="carrito-modal">
+    <div class="carrito-content">
+        <span id="cerrar-carrito" class="cerrar">&times;</span>
+        <h2>Tu Carrito</h2>
+        <ul id="carrito-items">
+            <li>No hay productos aún</li>
+        </ul>
+        <div class="carrito-total">
+            <strong>Total:</strong> $<span id="carrito-total">0</span>
+        </div>
+        <button id="checkout-btn">Ir a Pagar</button>
+    </div>
+</div>
         </div>
     </nav>
 
@@ -145,18 +161,18 @@
             </ul>
         </div>
         <div class="menu-item has-dropdown">
-            <a href="marca.html">MARCAS</a>
+            <a href="/html/marca.html">MARCAS</a>
             <ul class="dropdown">
-                <li><a href="#">Fiorucci</a></li>
-                <li><a href="#">Bronco</a></li>
-                <li><a href="#">Lois</a></li>
-                <li><a href="#">1921 by McGregor</a></li>
-                <li><a href="#">Tayssir Jeans</a></li>
+                <li><a href="/html/marcas/machine.html">Machine</a></li>
+                <li><a href="/html/marcas/bronco.html">Bronco</a></li>
+                <li><a href="/html/marcas/lois.html">Lois</a></li>
+                <li><a href="/html/marcas/1921.html">1921 International</a></li>
+                <li><a href="/html/marcas/tayssir.html">Tayssir Jeans</a></li>
             </ul>
         </div>
         <a href="/html/oferta.html">OFERTAS RELÁMPAGO</a>
         <a href="/html/Basico.html">BÁSICO</a>
-        <a href="nuevo.html">NUEVO</a>
+        <a href="/html/nuevo.html">NUEVO</a>
     </div>
 
     <!-- Catálogo Nuevo -->
@@ -195,6 +211,39 @@
             </div>
         </div>
     </section>
+    <footer class="footer">
+        <div class="footer-marcas">
+            <span class="bronco">BRONCO</span>
+            <span class="lois">LOIS</span>
+            <span class="taysir">TAYSIR</span>
+            <span class="international">1921 INTERNATIONAL</span>
+            <span class="fiorucci">FIORUCCI</span>
+        </div>
+
+        <div class="footer-info-clean">
+            <div>
+                <h4>PAGO SEGURO</h4>
+                <div class="payment-icons">
+                    <i class="fa-brands fa-cc-visa"></i>
+                    <i class="fa-brands fa-cc-diners-club"></i>
+                    <i class="fa-brands fa-cc-mastercard"></i>
+                    <i class="fa-brands fa-cc-amex"></i>
+                </div>
+            </div>
+
+            <div class="footer-redes">
+                <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+                <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+            </div>
+        </div>
+
+        <p class="footer-copy">
+            Copyright © 2023 American Brands. Reservados todos los derechos. <a href="#">Mundo Web</a>
+        </p>
+        <p class="footer-brand">AMERICAN BRANDS</p>
+    </footer> 
 
     <script>
     // Carrusel automático reducido para cada tarjeta
