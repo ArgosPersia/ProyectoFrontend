@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>American Brands - Caballero</title>
+    <title>American Brands - Básicos</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="/css/styles.css">
@@ -32,7 +32,6 @@
             width: 100%;
             max-width: 260px;
             min-width: 220px;
-            height: auto;
             aspect-ratio: 1/1;
             position: relative;
             overflow: hidden;
@@ -49,7 +48,6 @@
             opacity: 0;
             transition: opacity 0.7s;
             border-radius: 8px;
-            aspect-ratio: 1/1;
         }
         .mini-carousel img.active {
             opacity: 1;
@@ -84,7 +82,7 @@
 <body>
 
     <!-- Barra principal -->
-   <nav>
+    <nav>
         <div class="search-bar">
             <input type="text" placeholder="Buscar...">
             <i class="fas fa-search"></i>
@@ -100,17 +98,15 @@
                     <a href="../html/registroUsuario.html">Registrarse</a>
                 </div>
             </div>
-
             <i class="fas fa-shopping-bag"></i>
         </div>
     </nav>
 
-
     <!-- Segunda barra -->
-     <div class="sub-nav">
+    <div class="sub-nav">
         <a href="/html/index.html">INICIO</a>
         <div class="menu-item has-dropdown">
-            <a href="/html/dama.html">DAMA</a>
+            <a href="dama.html">DAMA</a>
             <ul class="dropdown">
                 <li><a href="#">Blusas</a></li>
                 <li><a href="#">Camisas</a></li>
@@ -129,7 +125,7 @@
             </ul>
         </div>
         <div class="menu-item has-dropdown">
-            <a href="/html/caballero.html">CABALLERO</a>
+            <a href="caballero.html">CABALLERO</a>
             <ul class="dropdown">
                 <li><a href="#">Camisas</a></li>
                 <li><a href="#">Camisetas</a></li>
@@ -151,55 +147,58 @@
                 <li><a href="#">Tayssir Jeans</a></li>
             </ul>
         </div>
-        <a href="/html/oferta.html">OFERTAS RELÁMPAGO</a>
-        <a href="/html/Basico.html">BÁSICO</a>
-        <a href="/html/nuevo.html">NUEVO</a>
+        
+        <a href="nuevo.html">NUEVO</a>
     </div>
 
-    
-    <section class="catalogo catalogo-caballero" style="padding: 40px 0;">
-        <h2 style="text-align:center; margin-bottom: 30px;">Catálogo</h2>
+    <section class="catalogo" style="padding: 40px 0;">
+        <h2 style="text-align:center; margin-bottom: 30px;">Ropa Básica</h2>
         <div class="catalogo-grid">
+
             <div class="producto">
                 <div class="mini-carousel">
-                    <img src="/img_marcas/img_productos/machi1.jpg" alt="" class="active">
-                    <img src="/img_marcas/img_productos/machi2.jpg" alt="">
-                    <img src="/img_marcas/img_productos/machi3.jpg" alt="">
+                    <img src="/img_marcas/img_productos/camisetabasica1.jpg" alt="" class="active">
+                    <img src="/img_marcas/img_productos/camisetabasica2.jpg" alt="">
+                    <img src="/img_marcas/img_productos/camisetabasica3.jpg" alt="">
                 </div>
-                <h3>Pantalon N</h3>
+                <h3>Camiseta Básica</h3>
+                <p>$29.900</p>
+                <button>Ver más</button>
+            </div>
+
+            <div class="producto">
+                <div class="mini-carousel">
+                    <img src="/img_marcas/img_productos/pantalonba1.jpg" alt="" class="active">
+                    <img src="/img_marcas/img_productos/pantalonba3.jpg" alt="">
+                    <img src="/img_marcas/img_productos/pantalonba2.jpg" alt="">
+                </div>
+                <h3>Jean Básico</h3>
+                <p>$39.900</p>
+                <button>Ver más</button>
+            </div>
+
+            <div class="producto">
+                <div class="mini-carousel">
+                    <img src="/img_marcas/img_productos/hoba1.jpg" alt="" class="active">
+                    <img src="/img_marcas/img_productos/hoba3.jpg" alt="">
+                    <img src="/img_marcas/img_productos/hoba2.jpg" alt="">
+                </div>
+                <h3>Sudadera Básica</h3>
+                <p>$39.900</p>
+                <button>Ver más</button>
+            </div>
+
+            <div class="producto">
+                <div class="mini-carousel">
+                    <img src="/img_marcas/img_productos/chaba1.jpg" alt="" class="active">
+                    <img src="/img_marcas/img_productos/chaba2.jpg" alt="">
+                    <img src="/img_marcas/img_productos/chaba3.jpg" alt="">
+                </div>
+                <h3>Chaqueta Básica</h3>
                 <p>$79.900</p>
                 <button>Ver más</button>
             </div>
-            <div class="producto">
-                <div class="mini-carousel">
-                    <img src="/img_marcas/img_productos/machi4.jpg" alt="" class="active">
-                    <img src="/img_marcas/img_productos/machi6.jpg" alt="">
-                    <img src="/img_marcas/img_productos/machi5.jpg" alt="">
-                </div>
-                <h3>Pantalon C</h3>
-                <p>$59.900</p>
-                <button>Ver más</button>
-            </div>
-            <div class="producto">
-                <div class="mini-carousel">
-                    <img src="/img_marcas/img_productos/machi7.jpg" alt="" class="active">
-                    <img src="/img_marcas/img_productos/machi8.jpg" alt="">
-                    <img src="/img_marcas/img_productos/machi9.jpg" alt="">
-                </div>
-                <h3>Pantalon A</h3>
-                <p>$79.900</p>
-                <button>Ver más</button>
-            </div>
-            <div class="producto">
-                <div class="mini-carousel">
-                    <img src="/img_marcas/img_productos/machi10.jpg" alt="" class="active">
-                    <img src="/img_marcas/img_productos/machi11.jpg" alt="">
-                    <img src="/img_marcas/img_productos/machi12.jpg" alt="">
-                </div>
-                <h3>Pantalon B</h3>
-                <p>$59.900</p>
-                <button>Ver más</button>
-            </div>
+
         </div>
     </section>
 

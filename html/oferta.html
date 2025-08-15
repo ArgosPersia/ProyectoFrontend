@@ -75,6 +75,18 @@
             box-shadow: 0 6px 18px rgba(255,102,0,0.16);
             outline: none;
         }
+        .oferta {
+            position: absolute;
+            top: 8px;
+            left: 8px;
+            background: #ff2f009a;
+            color: #fff;
+            padding: 4px 8px;
+            font-size: 11px;
+            border-radius: 4px;
+            font-weight: bold;
+            z-index: 2;
+        }
         @media (max-width: 600px) {
             .mini-carousel { aspect-ratio: 1/1; max-width: 100%; min-width: 0; }
             .producto { min-height: 220px; }
@@ -84,7 +96,7 @@
 <body>
 
     <!-- Barra principal -->
-   <nav>
+  <nav>
         <div class="search-bar">
             <input type="text" placeholder="Buscar...">
             <i class="fas fa-search"></i>
@@ -107,10 +119,10 @@
 
 
     <!-- Segunda barra -->
-     <div class="sub-nav">
+    <div class="sub-nav">
         <a href="/html/index.html">INICIO</a>
         <div class="menu-item has-dropdown">
-            <a href="/html/dama.html">DAMA</a>
+            <a href="dama.html">DAMA</a>
             <ul class="dropdown">
                 <li><a href="#">Blusas</a></li>
                 <li><a href="#">Camisas</a></li>
@@ -129,7 +141,7 @@
             </ul>
         </div>
         <div class="menu-item has-dropdown">
-            <a href="/html/caballero.html">CABALLERO</a>
+            <a href="caballero.html">CABALLERO</a>
             <ul class="dropdown">
                 <li><a href="#">Camisas</a></li>
                 <li><a href="#">Camisetas</a></li>
@@ -151,55 +163,118 @@
                 <li><a href="#">Tayssir Jeans</a></li>
             </ul>
         </div>
-        <a href="/html/oferta.html">OFERTAS RELÁMPAGO</a>
         <a href="/html/Basico.html">BÁSICO</a>
-        <a href="/html/nuevo.html">NUEVO</a>
+        <a href="nuevo.html">NUEVO</a>
     </div>
 
     
     <section class="catalogo catalogo-caballero" style="padding: 40px 0;">
-        <h2 style="text-align:center; margin-bottom: 30px;">Catálogo</h2>
+        <h2 style="text-align:center; margin-bottom: 30px;">Ofertas Relámpago </h2>
         <div class="catalogo-grid">
+
+            
             <div class="producto">
                 <div class="mini-carousel">
+                    <span class="oferta">⚡ Oferta Relámpago</span>
                     <img src="/img_marcas/img_productos/machi1.jpg" alt="" class="active">
                     <img src="/img_marcas/img_productos/machi2.jpg" alt="">
                     <img src="/img_marcas/img_productos/machi3.jpg" alt="">
                 </div>
                 <h3>Pantalon N</h3>
-                <p>$79.900</p>
+                <p>$49.900</p>
                 <button>Ver más</button>
             </div>
+
+           
             <div class="producto">
                 <div class="mini-carousel">
-                    <img src="/img_marcas/img_productos/machi4.jpg" alt="" class="active">
-                    <img src="/img_marcas/img_productos/machi6.jpg" alt="">
-                    <img src="/img_marcas/img_productos/machi5.jpg" alt="">
+                    <span class="oferta">⚡ Oferta Relámpago</span>
+                    <img src="/img_marcas/img_productos/blusatay1.jpg" alt="" class="active">
+                    <img src="/img_marcas/img_productos/blusatay2.jpg" alt="">
+                    <img src="/img_marcas/img_productos/blusatay3.jpg" alt="">
                 </div>
-                <h3>Pantalon C</h3>
-                <p>$59.900</p>
+                <h3>Blusa B</h3>
+                <p>$39.900</p>
                 <button>Ver más</button>
             </div>
+
+         
             <div class="producto">
                 <div class="mini-carousel">
-                    <img src="/img_marcas/img_productos/machi7.jpg" alt="" class="active">
-                    <img src="/img_marcas/img_productos/machi8.jpg" alt="">
-                    <img src="/img_marcas/img_productos/machi9.jpg" alt="">
+                    <span class="oferta">⚡ Oferta Relámpago</span>
+                    <img src="/img_marcas/img_productos/busob1.jpg" alt="" class="active">
+                    <img src="/img_marcas/img_productos/busob2.jpg" alt="">
+                    <img src="/img_marcas/img_productos/busob3.jpg" alt="">
+                </div>
+                <h3>Buzo R</h3>
+                <p>$49.900</p>
+                <button>Ver más</button>
+            </div>
+
+      
+            <div class="producto">
+                <div class="mini-carousel">
+                    <span class="oferta">⚡ Oferta Relámpago</span>
+                    <img src="/img_marcas/img_productos/polob1.jpg" alt="" class="active">
+                    <img src="/img_marcas/img_productos/polob2.jpg" alt="">
+                    <img src="/img_marcas/img_productos/polob3.jpg" alt="">
+                </div>
+                <h3>Camisa Polo</h3>
+                <p>$39.900</p>
+                <button>Ver más</button>
+            </div>
+
+    
+            <div class="producto">
+                <div class="mini-carousel">
+                    <span class="oferta">⚡ Oferta Relámpago</span>
+                    <img src="/img_marcas/img_productos/buzotay1.jpg" alt="" class="active">
+                    <img src="/img_marcas/img_productos/buzotay2.jpg" alt="">
+                    <img src="/img_marcas/img_productos/buzotay3.jpg" alt="">
+                </div>
+                <h3>Buzo</h3>
+                <p>$69.900</p>
+                <button>Ver más</button>
+            </div>
+
+            <div class="producto">
+                <div class="mini-carousel">
+                    <span class="oferta">⚡ Oferta Relámpago</span>
+                    <img src="/img_marcas/img_productos/hoodie_1.jpg" alt="" class="active">
+                    <img src="/img_marcas/img_productos/hoodie_2.jpg" alt="">
+                    <img src="/img_marcas/img_productos/hoodie_3.jpg" alt="">
+                </div>
+                <h3>Camiseta Cartoon</h3>
+                <p>$39.900</p>
+                <button>Ver más</button>
+            </div>
+
+   
+            <div class="producto">
+                <div class="mini-carousel">
+                    <span class="oferta">⚡ Oferta Relámpago</span>
+                    <img src="/img_marcas/img_productos/pantb1.jpg" alt="" class="active">
+                    <img src="/img_marcas/img_productos/pantb2.jpg" alt="">
+                    <img src="/img_marcas/img_productos/pantb3.jpg" alt="">
                 </div>
                 <h3>Pantalon A</h3>
-                <p>$79.900</p>
+                <p>$49.900</p>
                 <button>Ver más</button>
             </div>
+
+   
             <div class="producto">
                 <div class="mini-carousel">
-                    <img src="/img_marcas/img_productos/machi10.jpg" alt="" class="active">
-                    <img src="/img_marcas/img_productos/machi11.jpg" alt="">
-                    <img src="/img_marcas/img_productos/machi12.jpg" alt="">
+                    <span class="oferta">⚡ Oferta Relámpago</span>
+                    <img src="/img_marcas/img_productos/gorra19_1.jpg" alt="" class="active">
+                    <img src="/img_marcas/img_productos/gorra19_2.jpg" alt="">
+                    <img src="/img_marcas/img_productos/gorra19_3.jpg" alt="">
                 </div>
-                <h3>Pantalon B</h3>
+                <h3>Gorra Under</h3>
                 <p>$59.900</p>
                 <button>Ver más</button>
             </div>
+
         </div>
     </section>
 
