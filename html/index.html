@@ -6,6 +6,7 @@
     <title>American Brands</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uW/jI95s0QchbFhB6D3B6LzD5H6w5Gz7J9B7N5f5W5B5Y5F5W5W5W5A5A5Y5A5B5F5Y5F5A5A5B5Y5F5W5F5W5W5W5A5A5B5Y5F5W5F5W5W5A5A5B5Y5F5W5F5W5W5A5A5B5Y5F5W5F5W5W5A5A5B5Y5F5W5F5W5W5A5A5B5Y5F5W5F5W5W5A5A5B5Y5F5W5F5W5W5A5A5B5Y5F5W5F5W5W5A5A5B5Y5F5W5F5W5W5A5A5B5Y5F5W5F5W5W5A5A5B5Y5F5W5F5W5W5A5A5B5Y5F5W5F5W5W5A5A5B5Y5F5W5F5W5W5A5A5B5Y5F5W5F5W5W5A5A5B5Y5F5W5F5W5W5A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="../css/styles.css">
     
 </head>
@@ -29,7 +30,23 @@
                 </div>
             </div>
 
-            <i class="fas fa-shopping-bag"></i>
+            <div class="shopping-bag" id="carrito-icon">
+    <i class="fas fa-shopping-bag"></i>
+    <span class="carrito-count">0</span>
+            </div>
+            <div id="carrito-modal" class="carrito-modal">
+    <div class="carrito-content">
+        <span id="cerrar-carrito" class="cerrar">&times;</span>
+        <h2>Tu Carrito</h2>
+        <ul id="carrito-items">
+            <li>No hay productos aún</li>
+        </ul>
+        <div class="carrito-total">
+            <strong>Total:</strong> $<span id="carrito-total">0</span>
+        </div>
+        <button id="checkout-btn">Ir a Pagar</button>
+    </div>
+</div>
         </div>
     </nav>
 
@@ -75,7 +92,7 @@
                 <li><a href="#">Fiorucci</a></li>
                 <li><a href="#">Bronco</a></li>
                 <li><a href="#">Lois</a></li>
-                <li><a href="#">1921 by McGregor</a></li>
+                <li><a href="#">1921 international</a></li>
                 <li><a href="#">Tayssir Jeans</a></li>
             </ul>
         </div>
@@ -86,16 +103,7 @@
     </div>
 
 
-<div class="menu-item has-dropdown">
-    <a href="marca.html">MARCAS</a>
-    <ul class="dropdown">
-    <li><a href="#">Fiorucci</a></li>
-    <li><a href="#">Bronco</a></li>
-    <li><a href="#">Lois</a></li>
-    <li><a href="#">1921 by McGregor</a></li>
-    <li><a href="#">Tayssir Jeans</a></li>
-    </ul>
-</div>
+
     <!--Este es él carrusel automático-->
     <div class="carousel">
         <div class="carousel-track">
@@ -105,7 +113,7 @@
             <img src="../img_carrusel_automatico/foto4.jpeg" alt="Imagen 4">
             <img src="../img_carrusel_automatico/ropa1.png" alt="Imagen 5">
         </div>
-    </div
+    </div>
 
     <!--Carrusel manual-->
 <div class="carrusel-contenedor">
@@ -120,7 +128,142 @@
         <div class="carrusel-indicadores"></div>
     </div>
 
+    <section class="nuevo-fit-carrusel">
+    <div class="slides">
+
+        <!--Carrusel fits-->
+        <div class="slide active">
+            <div class="nuevo-fit-texto">
+                <h3 class="subtitulo">NUEVOS FITS</h3>
+                <h1 class="titulo">Palazzo</h1>
+                <p class="descripcion">
+                    Alargan y estilizan visualmente nuestra figura. De pierna ancha desde la cadera hasta el final.
+                </p>
+                <a href="#" class="boton-comprar" data-nombre="Palazzo" data-precio="120">COMPRA AQUÍ</a>
+            </div>
+            <div class="nuevo-fit-imagen">
+                <img src="../img_Carrusel_Fits/palazo.png" alt="Palazzo">
+                <span class="marca-agua">palazo</span>
+            </div>
+        </div>
+
+        <div class="slide">
+            <div class="nuevo-fit-texto">
+                <h3 class="subtitulo">NUEVOS FITS</h3>
+                <h1 class="titulo">Oficina Casual</h1>
+                <p class="descripcion">
+                    Pantalón ajustado que realza la figura. Perfecto para un look moderno y casual.
+                </p>
+                <a href="#" class="boton-comprar" data-nombre="Oficina Casual" data-precio="90">COMPRA AQUÍ</a>
+            </div>
+            <div class="nuevo-fit-imagen">
+                <img src="../img_Carrusel_Fits/oficina casual3.jpg" alt="Oficina Casual">
+                <span class="marca-agua">skinny</span>
+            </div>
+        </div>
+
+        <div class="slide">
+            <div class="nuevo-fit-texto">
+                <h3 class="subtitulo">NUEVOS FITS</h3>
+                <h1 class="titulo">Pantalón ancho</h1>
+                <p class="descripcion">
+                    Comodidad y estilo en un solo diseño, con pierna amplia desde la cintura.
+                </p>
+                <a href="#" class="boton-comprar" data-nombre="Pantalón Ancho" data-precio="100">COMPRA AQUÍ</a>
+            </div>
+            <div class="nuevo-fit-imagen">
+                <img src="../img_Carrusel_Fits/Pantalón ancho1.jpeg" alt="Pantalon ancho">
+                <span class="marca-agua">wide leg</span>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="indicadores">
+        <span class="activo"></span>
+        <span></span>
+        <span></span>
+    </div>
+</section>
+
+<div id="carrito-modal" class="carrito-modal">
+    <div class="carrito-content">
+        <span id="cerrar-carrito" class="cerrar">&times;</span>
+        <h2>Tu Carrito</h2>
+        <ul id="carrito-items">
+            <li>No hay productos aún</li>
+        </ul>
+        <div class="carrito-total">
+            <strong>Total:</strong> $<span id="carrito-total">0</span>
+        </div>
+        <button id="checkout-btn">Ir a Pagar</button>
+    </div>
+</div>
+
+<section class="marcas-section">
+    <h2 class="marcas-titulo">TAMBIÉN PUEDES ENCONTRAR</h2>
+
+    <div class="marcas-carrusel">
+        <div class="marcas-track">
+            <div class="marca-slide">
+                <img src="../img_Colaboraciones/marca1.jpg" alt="Raydek">
+            </div>
+            <div class="marca-slide">
+                <img src="../img_Colaboraciones/marca2.png" alt="Dunkelvolk">
+            </div>
+            <div class="marca-slide">
+                <img src="../img_Colaboraciones/marca3.jpg" alt="DC Shoes">
+            </div>
+            <div class="marca-slide">
+                <img src="../img_Colaboraciones/marca4.png" alt="Quiksilver">
+            </div>
+        </div>
+        
+        <div class="marcas-indicadores">
+            </div>
+    </div>
+</section>
+</section>
+
+<footer class="footer">
+<div class="footer-marcas">
+    <span class="bronco">BRONCO</span>
+    <span class="lois">LOIS</span>
+    <span class="taysir">TAYSIR</span>
+    <span class="international">1921 INTERNATIONAL</span>
+    <span class="fiorucci">FIORUCCI</span>
+</div>
+
+<div class="footer-info-clean">
+    <div>
+    <h4>PAGO SEGURO</h4>
+    <div class="payment-icons">
+        <i class="fa-brands fa-cc-visa"></i>
+        <i class="fa-brands fa-cc-diners-club"></i>
+        <i class="fa-brands fa-cc-mastercard"></i>
+        <i class="fa-brands fa-cc-amex"></i>
+    </div>
+    </div>
+
+    <div class="footer-redes">
+    <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+    <a href="#" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+    <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+    <a href="#" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+    </div>
+</div>
+
+<p class="footer-copy">
+    Copyright © 2023 American Brands. Reservados todos los derechos. <a href="#">Mundo Web</a>
+</p>
+
+<p class="footer-brand">AMERICAN BRANDS</p>
+</footer>
     <script src="../js/carrusel_automatico.js"></script>
     <script src="../js/carrusel_productos.js"></script>
+    <script src="../js/carruselNuevosFits.js"></script>
+    <script src="../js/carrito.js"></script>
+    <script src="../js/marcas_Colaboraciones.js"></script>
+
 </body>
 </html>
